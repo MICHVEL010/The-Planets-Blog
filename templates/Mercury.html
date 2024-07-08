@@ -1,0 +1,333 @@
+<!-- Editor : Michael Raouf Eldeeb -->
+<!-- Editor : Heba Elsayed -->
+<!--_____________________________________________________________________________ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+<title>Mercury</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+                background-image: url("static/img/4c252dc6874daa44427005d606b59723.jpg");
+                font-family: Arial;
+                margin: 0;
+            }
+
+        /* Header/logo Title */
+        .header {
+            background-image: url("static/img/True_Mercury.jpg");
+            background-position-x: right;
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            background-color: black;
+            padding: 150px;
+            text-align: left;
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {  
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            /* background-color: #ddd; */
+            
+            
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 50%;
+            /* background-color: #ddd; */
+            
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+        }
+        .footer a{
+            text-align: center;
+            color: white;
+            padding: 40px;
+            text-decoration: none;
+        }
+        .footer a:hover{
+            color:#cccccc;
+        }
+        p{
+            color: white;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .row, .navbar {   
+            flex-direction: column;
+        }
+        }
+        h1{
+            color: white;
+        }
+        .notes{
+            border: 1px gray solid;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 30px;
+        }
+        .notes1{
+            color: black;
+        }
+        .back{
+            flex: 10%;
+            /* background-color: #333; */
+        
+        }
+        .navegatorT a{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            /* padding: 30px; */
+            text-decoration: none;
+
+        }
+        .back a:hover{
+            
+            text-decoration: underline;
+        }
+        .navegator{
+            background-color: #ddd;
+            border-radius: 10px;
+            border: 1px white solid;
+            padding: 10px;
+            margin: 10px;
+        }
+        </style>
+        </head>
+        <body>
+
+
+        <!-- Header -->
+        <div class="header">
+        <h1 style="font-size: 90px;">Mercury</h1>
+        <p style="font-size: 20px;">From the surface of Mercury, </p>
+        <p style="font-size: 20px;"> the Sun would appear more than three times </p>
+        <p style="font-size: 20px;">as large as it does when viewed from Earth, </p>
+        <p style="font-size: 20px;">and the sunlight would be as much as 11 times brighter. </p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="Home">Home</a>
+            <a href="Sun">The Sun</a>
+            <a href= "Earth" >Earth</a>
+            <a href= "Moon">The Moon</a>
+            <a href="Mercury">Mercury</a>
+            <a href="venus">Venus</a>
+            <a href="Mars">Mars</a>
+            </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="back">
+                <br><br><br><br>
+                <div class="navegator">
+                    <div class="navegatorT">
+                        <h3>On this Page</h3>
+                        <a href="#introduction">introduction</a>
+                        <br>
+                        <a href="#Namesake">Namesake</a>
+                        <br>
+                        <a href="#PotentialforLife">Potential for Life</a>
+                        <br>
+                        <a href="#SizeandDistance">Size and Distance</a>
+                        <br>
+                        <a href="#OrbitandRotation">Orbit and Rotation</a>
+                        <br>
+                        <a href="#Moons">Moons</a>
+                        <br>
+                        <a href="#Rings">Rings</a>
+                        <br>
+                        <a href="#Formation">Formation</a>
+                        <br>
+                        <a href="#Structure">Structure</a>
+                        <br>
+                        <a href="#Surface">Surface</a>
+                        <br>
+                        <a href="#Atmosphere">Atmosphere</a>
+                        <br>
+                        <a href="#Magnetosphere">Magnetosphere</a>
+        
+                    </div>
+            </div>
+            </div>
+        <div class="main">
+            
+            
+            <br><br>
+            <a name="introduction"></a>
+            <p>The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter.</p>
+            <p>Mercury's surface temperatures are both extremely hot and cold. Because the planet is so close to the Sun, day temperatures can reach highs of 800°F (430°C). Without an atmosphere to retain that heat at night, temperatures can dip as low as -290°F (-180°C).</p>
+            <p>Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere. But Mercury is the fastest planet, zipping around the Sun every 88 Earth days.</p>
+            <br><br>
+            <a name="Namesake"></a>
+            <h1>Namesake</h1>
+            <br>
+            <p>Mercury is appropriately named for the swiftest of the ancient Roman gods.</p>
+            <br><br>
+            <a name="PotentialforLife"></a>
+            <h1>Potential for Life</h1>
+            <br>
+            <p>Mercury's environment is not conducive to life as we know it. The temperatures and solar radiation that characterize this planet are most likely too extreme for organisms to adapt to.</p>
+            <br><br>
+            <a name="SizeandDistance"></a>
+            <h1>Size and Distance</h1>
+            <br>
+            <p>With a radius of 1,516 miles (2,440 kilometers), Mercury is a little more than 1/3 the width of Earth. If Earth were the size of a nickel, Mercury would be about as big as a blueberry.</p>
+            <p>From an average distance of 36 million miles (58 million kilometers), Mercury is 0.4 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 3.2 minutes to travel from the Sun to Mercury.</p>
+            <br><br>
+            <a name="OrbitandRotation"></a>
+            <h1>Orbit and Rotation</h1>
+            <br>
+            <p>Mercury's highly eccentric, egg-shaped orbit takes the planet as close as 29 million miles (47 million kilometers) and as far as 43 million miles (70 million kilometers) from the Sun. It speeds around the Sun every 88 days, traveling through space at nearly 29 miles (47 kilometers) per second, faster than any other planet.</p>
+            <p>Mercury spins slowly on its axis and completes one rotation every 59 Earth days. But when Mercury is moving fastest in its elliptical orbit around the Sun (and it is closest to the Sun), each rotation is not accompanied by sunrise and sunset like it is on most other planets. The morning Sun appears to rise briefly, set, and rise again from some parts of the planet's surface. The same thing happens in reverse at sunset for other parts of the surface. One Mercury solar day (one full day-night cycle) equals 176 Earth days – just over two years on Mercury.</p>
+            <p>Mercury's axis of rotation is tilted just 2 degrees with respect to the plane of its orbit around the Sun. That means it spins nearly perfectly upright and so does not experience seasons as many other planets do.</p>
+            <br><br>
+            <a name="Moons"></a>
+            <h1>Moons</h1>
+            <br>
+            <p>Mercury doesn't have moons.</p>
+            <br><br>
+            <a name="Rings"></a>
+            <h1>Rings</h1>
+            <br>
+            <p>Mercury doesn't have rings.</p>
+            <br><br>
+            <a name="Formation"></a>
+            <h1>Formation</h1>
+            <br>
+            <p>Mercury formed about 4.5 billion years ago when gravity pulled swirling gas and dust together to form this small planet nearest the Sun. Like its fellow terrestrial planets, Mercury has a central core, a rocky mantle, and a solid crust.</p>
+            <br><br>
+            <a name="Structure"></a>
+            <h1>Structure</h1>
+            <br>
+            <p>Mercury is the second densest planet, after Earth. It has a large metallic core with a radius of about 1,289 miles (2,074 kilometers), about 85 percent of the planet's radius. There is evidence that it is partly molten or liquid. Mercury's outer shell, comparable to Earth's outer shell (called the mantle and crust), is only about 400 kilometers (250 miles) thick.</p>
+            <br><br>
+            <a name="Surface"></a>
+            <h1>Surface</h1>
+            <br>
+            <p>Mercury's surface resembles that of Earth's Moon, scarred by many impact craters resulting from collisions with meteoroids and comets. Craters and features on Mercury are named after famous deceased artists, musicians, or authors, including children's author Dr. Seuss and dance pioneer Alvin Ailey.</p>
+            <p>Very large impact basins, including Caloris (960 miles or 1,550 kilometers in diameter) and Rachmaninoff (190 miles, or 306 kilometers in diameter), were created by asteroid impacts on the planet's surface early in the solar system's history. While there are large areas of smooth terrain, there are also cliffs, some hundreds of miles long and soaring up to a mile high. They rose as the planet's interior cooled and contracted over the billions of years since Mercury formed.</p>
+            <p>Most of Mercury's surface would appear greyish-brown to the human eye. The bright streaks are called "crater rays." They are formed when an asteroid or comet strikes the surface. The tremendous amount of energy that is released in such an impact digs a big hole in the ground, and also crushes a huge amount of rock under the point of impact. Some of this crushed material is thrown far from the crater and then falls to the surface, forming the rays. Fine particles of crushed rock are more reflective than large pieces, so the rays look brighter. The space environment – dust impacts and solar-wind particles – causes the rays to darken with time.</p>
+            <p>Temperatures on Mercury are extreme. During the day, temperatures on the surface can reach 800 degrees Fahrenheit (430 degrees Celsius). Because the planet has no atmosphere to retain that heat, nighttime temperatures on the surface can drop to minus 290 degrees Fahrenheit (minus 180 degrees Celsius).</p>
+            <p>Mercury may have water ice at its north and south poles inside deep craters, but only in regions in permanent shadows. In those shadows, it could be cold enough to preserve water ice despite the high temperatures on sunlit parts of the planet.</p>
+            <br><br>
+            <a name="Atmosphere"></a>
+            <h1>Atmosphere</h1>
+            <br>
+            <p>Instead of an atmosphere, Mercury possesses a thin exosphere made up of atoms blasted off the surface by the solar wind and striking meteoroids. Mercury's exosphere is composed mostly of oxygen, sodium, hydrogen, helium, and potassium.</p>
+            <br><br>
+            <a name="Magnetosphere"></a>
+            <h1>Magnetosphere</h1>
+            <br>
+            <p>Mercury's magnetic field is offset relative to the planet's equator. Though Mercury's magnetic field at the surface has just 1% the strength of Earth's, it interacts with the magnetic field of the solar wind to sometimes create intense magnetic tornadoes that funnel the fast, hot solar wind plasma down to the surface of the planet. When the ions strike the surface, they knock off neutrally charged atoms and send them on a loop high into the sky.</p>
+            <br><br>
+
+
+
+
+
+
+            </div>
+        <div class="side">
+            
+            
+            <div style="background-color: black;">
+                <img src= "{{url_for('static', filename='GIF/Mercury Planet GIF - Mercury Planet Spinning - Discover & Share GIFs.gif')}} " width="400px" height="400px">
+                
+                </div>
+            <br><br><br>
+            <div class="notes">
+                <h1 class="notes1">Quick Facts</h1>
+                <h3 class="notes1">Day</h3>
+                <p class="notes1">About 59 Earth days (to complete one rotation on its axis)</p>
+                <h3 class="notes1">Solar Day</h3>
+                <p class="notes1">About 176 Earth days (one full day-night cycle)</p>
+                <h3 class="notes1">Year</h3>
+                <p class="notes1">88 Earth days</p>
+                <h3 class="notes1">Radius</h3>
+                <p class="notes1">1,516 miles | 2,439.7 kilometers</p>
+                <h3 class="notes1">Planet Type</h3>
+                <p class="notes1">Terrestrial</p>
+                <h3 class="notes1">Terrestrial</h3>
+                <p class="notes1">0</p>
+            </div>
+            
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="foot">
+                <a href="AboutUs">About us</a>
+                <a href="Bibliography">Bibliography</a>
+                <a href="FeedBack">FeedBack</a>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+

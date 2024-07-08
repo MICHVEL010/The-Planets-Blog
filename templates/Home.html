@@ -1,0 +1,288 @@
+<!-- Editor : Michael Raouf Eldeeb -->
+<!-- Editor : Heba Elsayed -->
+<!--_____________________________________________________________________________ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+    
+        body {
+                background-image: url("static/img/4c252dc6874daa44427005d606b59723.jpg");
+                font-family: Arial;
+                margin: 0;
+            }
+
+        /* Header/logo Title */
+        .header {
+            background-image: url("static/img/725422.jpg");
+            background-position-x: right;
+            background-repeat: no-repeat;
+            background-size: 1500px;
+            background-color: black;
+            padding: 150px;
+            text-align: center;
+            text-decoration:solid;
+            text-overflow: ellipsis;
+            color: rgb(255, 255, 255);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {  
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            /* background-color: #ddd; */
+            
+            
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 50%;
+            /* background-color: #ddd; */
+            
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+        }
+        .footer a:hover{
+            color: #cccccc;
+        }
+        
+        p{
+            color: white;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .row, .navbar {   
+            flex-direction: column;
+        }
+        }
+        h1{
+            color: white;
+        }
+        .notes{
+            border: 1px gray solid;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 30px;
+        }
+        .notes1{
+            color: black;
+        }
+        
+        .footer a{
+            text-align: center;
+            color: white;
+            padding: 40px;
+            text-decoration: none;
+            
+        }
+        .back{
+            flex: 10%;
+            /* background-color: #333; */
+        
+        }
+        .navegatorT a{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            /* padding: 40px; */
+            text-decoration: none;
+
+        }
+        .back a:hover{
+            
+            text-decoration: underline;
+        }
+        .navegator{
+            background-color: #ddd;
+            border-radius: 10px;
+            border: 1px white solid;
+            padding: 10px;
+            margin: 10px;
+        }
+        </style>
+        </head>
+        <body>
+
+
+        <!-- Header -->
+        <div class="header">
+                <h1 style="font-size: 90px;color: white;">The Inner Rocky Planets</h1>
+                <p style="font-size: 40px;color: white;">Four unique, rocky worlds.</p>
+        
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="Home">Home</a>
+            <a href="Sun">The Sun</a>
+            <a href= "Earth" >Earth</a>
+            <a href= "Moon">The Moon</a>
+            <a href="Mercury">Mercury</a>
+            <a href="venus">Venus</a>
+            <a href="Mars">Mars</a>
+            </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="back">
+                <br><br><br><br>
+                <div class="navegator">
+                    <div class="navegatorT">
+                        <h3>On this Page</h3>
+                        <a href="#introduction">introduction.</a>
+                        <br>
+                        <a href="#WhatisaPlanet?">What is a Planet?</a>
+                        <br>
+                        <a href="#TheScientificProcess">The Scientific Process.</a>
+                        <br>
+                        <a href="#AnEvolvingDefinition">An Evolving Definition.</a>
+                        <br>
+                        <a href="#ThePlanetDebate">The Planet Debate.</a>
+                        <br>
+                        <a href="#TheNewDefinitionofPlanet">The New Definition of Planet.</a>
+                        <br>
+                        <a href="#DebateandDiscoveriesContinue">Debate and Discoveries Continue.</a>
+                        <br>
+                        
+                    </div>
+            </div>
+            </div>
+            
+            
+        
+        <div class="main">
+        <br><br>
+        <a name="introduction"></a>
+        <p>There are more planets than stars in our galaxy. The current count orbiting our star: eight.</p>
+        <p>The inner, rocky planets are Mercury, Venus, Earth, and Mars. NASA's newest rover — Perseverance — landed on Mars on Feb. 18, 2021. The outer planets are gas giants Jupiter and Saturn and ice giants Uranus and Neptune.</p>
+        
+        <a name="WhatisaPlanet?"></a>
+        <h1>What is a Planet?</h1>
+        <p>This seemingly simple question doesn't have a simple answer. Everyone knows that Earth, Mars and Jupiter are planets. But both Pluto and Ceres were once considered planets until new discoveries triggered scientific debate about how to best describe them—a vigorous debate that continues to this day. The most recent definition of a planet was adopted by the International Astronomical Union in 2006.</p>
+        
+        <p>It says a planet must do three things:</p>
+        <ol>
+            <li>It must orbit a star (in our cosmic neighborhood, the Sun).</li>
+            <li>It must be big enough to have enough gravity to force it into a spherical shape.</li>
+            <li>It must be big enough that its gravity cleared away any other objects of a similar size near its orbit around the Sun.</li>
+        </ol>
+        <p>Discussion—and debate—will continue as our view of the cosmos continues to expand.</p>
+        <a name="TheScientificProcess"></a>
+        <h1>The Scientific Process</h1>
+        <p>Science is a dynamic process of questioning, hypothesizing, discovering, and changing previous ideas based on what is learned. Scientific ideas are developed through reasoning and tested against observations. Scientists assess and question each other's work in a critical process called peer review.</p>
+        <p>Our understanding about the universe and our place in it has changed over time. New information can cause us to rethink what we know and reevaluate how we classify objects in order to better understand them. New ideas and perspectives can come from questioning a theory or seeing where a classification breaks down.</p>
+        <a name="AnEvolvingDefinition"></a>
+        <h1>An Evolving Definition</h1>
+        <p>Defining the term planet is important, because such definitions reflect our understanding of the origins, architecture, and evolution of our solar system. Over historical time, objects categorized as planets have changed. The ancient Greeks counted the Earth's Moon and Sun as planets along with Mercury, Venus, Mars, Jupiter, and Saturn. Earth was not considered a planet, but rather was thought to be the central object around which all the other celestial objects orbited. The first known model that placed the Sun at the center of the known universe with the Earth revolving around it was presented by Aristarchus of Samos in the third century BCE, but it was not generally accepted. It wasn't until the 16th century that the idea was revived by Nicolaus Copernicus.</p>
+        <p>By the 17th century, astronomers (aided by the invention of the telescope) realized that the Sun was the celestial object around which all the planets—including Earth—orbit, and that the moon is not a planet, but a satellite (moon) of Earth. Uranus was added as a planet in 1781 and Neptune was discovered in 1846.</p>
+        <p>Ceres was discovered between Mars and Jupiter in 1801 and originally classified as a planet. But as many more objects were subsequently found in the same region, it was realized that Ceres was the first of a class of similar objects that were eventually termed asteroids (star-like) or minor planets.</p>
+        <p>Pluto, discovered in 1930, was identified as the ninth planet. But Pluto is much smaller than Mercury and is even smaller than some of the planetary moons. It is unlike the terrestrial planets (Mercury, Venus, Earth, Mars), or the gas giants (Jupiter, Saturn), or the ice giants (Uranus, Neptune). Charon, its huge satellite, is nearly half the size of Pluto and shares Pluto's orbit. Though Pluto kept its planetary status through the 1980s, things began to change in the 1990s with some new discoveries.</p>
+        <p>Technical advances in telescopes led to better observations and improved detection of very small, very distant objects. In the early 1990s, astronomers began finding numerous icy worlds orbiting the Sun in a doughnut-shaped region called the Kuiper Belt beyond the orbit of Neptune—out in Pluto's realm. With the discovery of the Kuiper Belt and its thousands of icy bodies (known as Kuiper Belt Objects, or KBOs; also called transneptunians), it was proposed that it is more useful to think of Pluto as the biggest KBO instead of a planet.</p>
+        <a name="ThePlanetDebate"></a>
+        <h1>The Planet Debate</h1>
+        <p>Then, in 2005, a team of astronomers announced that they had found a tenth planet—it was a KBO similar in size to Pluto. People began to wonder what planethood really means. Just what is a planet, anyway? Suddenly the answer to that question didn't seem so self-evident, and, as it turns out, there are plenty of disagreements about it.</p>
+        <p>The International Astronomical Union (IAU), a worldwide organization of astronomers, took on the challenge of classifying the newly found KBO (later named Eris). In 2006, the IAU passed a resolution that defined planet and established a new category, dwarf planet. Eris, Ceres, Pluto, and two more recently discovered KBOs named Haumea and Makemake, are the dwarf planets recognized by the IAU. There may be another 100 dwarf planets in the solar system and hundreds more in and just outside the Kuiper Belt.</p>
+        <a name="TheNewDefinitionofPlanet"></a>
+        <h1>The New Definition of Planet</h1>
+        <p>Here is the text of the IAU’s Resolution B5: Definition of a Planet in the Solar System:</p>
+        <p>Contemporary observations are changing our understanding of planetary systems, and it is important that our nomenclature for objects reflect our current understanding. This applies, in particular, to the designation "planets". The word "planet" originally described "wanderers" that were known only as moving lights in the sky. Recent discoveries lead us to create a new definition, which we can make using currently available scientific information.</p>
+        <p>The IAU therefore resolves that planets and other bodies, except satellites, in our Solar System be defined into three distinct categories in the following way:</p>
+        <ol>
+            <li style="color: white;">A planet is a celestial body that (a) is in orbit around the Sun, (b) has sufficient mass for its self-gravity to overcome rigid body forces so that it assumes a hydrostatic equilibrium (nearly round) shape, and (c) has cleared the neighbourhood around its orbit.</li>
+            <li  style="color: white;">A "dwarf planet" is a celestial body that (a) is in orbit around the Sun, (b) has sufficient mass for its self-gravity to overcome rigid body forces so that it assumes a hydrostatic equilibrium (nearly round) shape, (c) has not cleared the neighbourhood around its orbit, and (d) is not a satellite.</li>
+            <li  style="color: white;">All other objects,except satellites, orbiting the Sun shall be referred to collectively as "Small Solar System Bodies".</li>
+        </ol>
+        <img src= "{{url_for('static', filename='img/Inner-Planets.jpg')}} " width="400px" height="300px">
+        
+        <a name="DebateandDiscoveriesContinue"></a>
+        <h1>Debate and Discoveries Continue</h1>
+        <p>Astronomers and planetary scientists did not unanimously agree with these definitions. To some it appeared that the classification scheme was designed to limit the number of planets; to others it was incomplete and the terms unclear. Some astronomers argued that location (context) is important, especially in understanding the formation and evolution of the solar system.</p>
+        <p>One idea is to simply define a planet as a natural object in space that is massive enough for gravity to make it approximately spherical. But some scientists objected that this simple definition does not take into account what degree of measurable roundness is needed for an object to be considered round. In fact, it is often difficult to accurately determine the shapes of some distant objects. Others argue that where an object is located or what it is made of do matter and there should not be a concern with dynamics; that is, whether or not an object sweeps up or scatters away its immediate neighbors, or holds them in stable orbits. The lively planethood debate continues.</p>
+        <p>As our knowledge deepens and expands, the more complex and intriguing the universe appears. Researchers have found hundreds of extrasolar planets, or exoplanets, that reside outside our solar system; there may be billions of exoplanets in the Milky Way Galaxy alone, and some may be habitable (have conditions favorable to life). Whether our definitions of planet can be applied to these newly found objects remains to be seen.</p>
+        
+
+                    </div>
+        <div class="side">
+            <div style="background-color: black;">
+                <img src= "{{url_for('static', filename='GIF/tumblr_nrlxpniTco1sstavyo1_400.webp')}} " width="400px" height="400px">
+        
+            </div>
+            
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="foot">
+            <a href="AboutUs">About us</a>
+            <a href="Bibliography">Bibliography</a>
+            <a href="FeedBack">FeedBack</a>
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
+

@@ -1,0 +1,333 @@
+<!-- Editor : Michael Raouf Eldeeb -->
+<!-- Editor : Heba Elsayed -->
+<!--_____________________________________________________________________________ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+<title>Mars</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+                background-image: url("static/img/4c252dc6874daa44427005d606b59723.jpg");
+                font-family: Arial;
+                margin: 0;
+            }
+
+        /* Header/logo Title */
+        .header {
+            background-image: url("static/img/mars-globe-valles-marineris-enhanced.jpg");
+            background-position-x: right;
+            background-repeat: no-repeat;
+            background-size: 700px;
+            background-color: black;
+            padding: 150px;
+            text-align: left;
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {  
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            /* background-color: #ddd; */
+            
+            
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 50%;
+            /* background-color: #ddd; */
+            
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+        }
+        .footer a{
+            text-align: center;
+            color: white;
+            padding: 40px;
+            text-decoration: none;
+        }
+        .footer a:hover{
+            color:#cccccc;
+        }
+        p{
+            color: white;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .row, .navbar {   
+            flex-direction: column;
+        }
+        }
+        h1{
+            color: white;
+        }
+        .notes{
+            border: 1px gray solid;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 30px;
+        }
+        .notes1{
+            color: black;
+        }
+        .back{
+            flex: 10%;
+            /* background-color: #333; */
+        
+        }
+        .navegatorT a{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            /* padding: 30px; */
+            text-decoration: none;
+
+        }
+        .back a:hover{
+            
+            text-decoration: underline;
+        }
+        .navegator{
+            background-color: #ddd;
+            border-radius: 10px;
+            border: 1px white solid;
+            padding: 10px;
+            margin: 10px;
+        }
+        </style>
+        </head>
+        <body>
+
+
+        <!-- Header -->
+        <div class="header">
+        <h1 style="font-size: 90px;">Mars</h1>
+        <p style="font-size: 20px;">Mars is a dusty, cold, desert world with a very thin atmosphere.</p>
+        <p style="font-size: 20px;">There is strong evidence Mars was (billions of years ago) </p>
+        <p style="font-size: 20px;"> wetter and warmer, with a thicker atmosphere.</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="Home">Home</a>
+            <a href="Sun">The Sun</a>
+            <a href= "Earth" >Earth</a>
+            <a href= "Moon">The Moon</a>
+            <a href="Mercury">Mercury</a>
+            <a href="venus">Venus</a>
+            <a href="Mars">Mars</a>
+            </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="back">
+                <br><br><br><br>
+                <div class="navegator">
+                    <div class="navegatorT">
+                        <h3>On this Page</h3>
+                        <a href="#introduction">introduction</a>
+                        <br>
+                        <a href="#Namesake">Namesake</a>
+                        <br>
+                        <a href="#PotentialforLife">Potential for Life</a>
+                        <br>
+                        <a href="#SizeandDistance">Size and Distance</a>
+                        <br>
+                        <a href="#OrbitandRotation">Orbit and Rotation</a>
+                        <br>
+                        <a href="#Moons">Moons</a>
+                        <br>
+                        <a href="#Rings">Rings</a>
+                        <br>
+                        <a href="#Formation">Formation</a>
+                        <br>
+                        <a href="#Structure">Structure</a>
+                        <br>
+                        <a href="#Surface">Surface</a>
+                        <br>
+                        <a href="#Atmosphere">Atmosphere</a>
+                        <br>
+                        <a href="#Magnetosphere">Magnetosphere</a>
+        
+                    </div>
+            </div>
+            </div>
+        
+        <div class="main">
+            
+            <br><br>
+            <a name="introduction"></a>
+            <p>Mars is no place for the faint-hearted. It’s dry, rocky, and bitter cold. The fourth planet from the Sun, Mars is one of Earth's two closest planetary neighbors (Venus is the other). Mars is one of the easiest planets to spot in the night sky – it looks like a bright red point of light.</p>
+            <p>Despite being inhospitable to humans, robotic explorers – like NASA's new Perseverance rover – are serving as pathfinders to eventually get humans to the surface of the Red Planet.</p>
+            <br><br>
+            <a name="Namesake"></a>
+            <h1>Namesake</h1>
+            <br>
+            <p>Mars was named by the ancient Romans for their god of war because its reddish color was reminiscent of blood. Other civilizations also named the planet for this attribute – for example, the Egyptians called it "Her Desher," meaning "the red one." Even today, it is frequently called the "Red Planet" because iron minerals in the Martian dirt oxidize, or rust, causing the surface to look red.</p>
+            <br><br>
+            <a name="PotentialforLife"></a>
+            <h1>Potential for Life</h1>
+            <br>
+            <p>Scientists don't expect to find living things currently thriving on Mars. Instead, they're looking for signs of life that existed long ago, when Mars was warmer and covered with water.</p>
+            <br><br>
+            <a name="SizeandDistance"></a>
+            <h1>Size and Distance</h1>
+            <br>
+            <p>With a radius of 2,106 miles (3,390 kilometers), Mars is about half the size of Earth. If Earth were the size of a nickel, Mars would be about as big as a raspberry.</p>
+            <p>From an average distance of 142 million miles (228 million kilometers), Mars is 1.5 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 13 minutes to travel from the Sun to Mars.</p>
+            <br><br>
+            <a name="OrbitandRotation"></a>
+            <h1>Orbit and Rotation</h1>
+            <br>
+            <p>As Mars orbits the Sun, it completes one rotation every 24.6 hours, which is very similar to one day on Earth (23.9 hours). Martian days are called sols – short for "solar day." A year on Mars lasts 669.6 sols, which is the same as 687 Earth days.</p>
+            <p>Mars' axis of rotation is tilted 25 degrees with respect to the plane of its orbit around the Sun. This is another similarity with Earth, which has an axial tilt of 23.4 degrees. Like Earth, Mars has distinct seasons, but they last longer than seasons here on Earth since Mars takes longer to orbit the Sun (because it's farther away). And while here on Earth the seasons are evenly spread over the year, lasting 3 months (or one quarter of a year), on Mars the seasons vary in length because of Mars' elliptical, egg-shaped orbit around the Sun.</p>
+            <p>Spring in the northern hemisphere (autumn in the southern) is the longest season at 194 sols. Autumn in the northern hemisphere (spring in the southern) is the shortest at 142 days. Northern winter/southern summer is 154 sols, and northern summer/southern winter is 178 sols.</p>
+            <br><br>
+            <a name="Moons"></a>
+            <h1>Moons</h1>
+            <br>
+            <p>Mars has two small moons, Phobos and Deimos, that may be captured asteroids. They're potato-shaped because they have too little mass for gravity to make them spherical. The moons get their names from the horses that pulled the chariot of the Greek god of war, Ares. Phobos, the innermost and larger moon, is heavily cratered, with deep grooves on its surface. It is slowly moving towards Mars and will crash into the planet or break apart in about 50 million years. Deimos is about half as big as Phobos and orbits two and a half times farther away from Mars. Oddly-shaped Deimos is covered in loose dirt that often fills the craters on its surface, making it appear smoother than pockmarked Phobos.</p>
+            <br><br>
+            <a name="Rings"></a>
+            <h1>Rings</h1>
+            <br>
+            <p>Mars has no rings. However, in 50 million years when Phobos crashes into Mars or breaks apart, it could create a dusty ring around the Red Planet.</p>
+            <br><br>
+            <a name="Formation"></a>
+            <h1>Formation</h1>
+            <br>
+            <p>When the solar system settled into its current layout about 4.5 billion years ago, Mars formed when gravity pulled swirling gas and dust in to become the fourth planet from the Sun. Mars is about half the size of Earth, and like its fellow terrestrial planets, it has a central core, a rocky mantle, and a solid crust.</p>
+            <br><br>
+            <a name="Structure"></a>
+            <h1>Structure</h1>
+            <br>
+            <p>Mars has a dense core at its center between 930 and 1,300 miles (1,500 to 2,100 kilometers) in radius. It's made of iron, nickel, and sulfur. Surrounding the core is a rocky mantle between 770 and 1,170 miles (1,240 to 1,880 kilometers) thick, and above that, a crust made of iron, magnesium, aluminum, calcium, and potassium. This crust is between 6 and 30 miles (10 to 50 kilometers) deep.</p>
+            <br><br>
+            <a name="Surface"></a>
+            <h1>Surface</h1>
+            <br>
+            <p>The Red Planet is actually many colors. At the surface, we see colors such as brown, gold, and tan. The reason Mars looks reddish is due to oxidization – or rusting – of iron in the rocks, regolith (Martian “soil”), and dust of Mars. This dust gets kicked up into the atmosphere and from a distance makes the planet appear mostly red.</p>
+            <p>Interestingly, while Mars is about half the diameter of Earth, its surface has nearly the same area as Earth’s dry land. Its volcanoes, impact craters, crustal movement, and atmospheric conditions such as dust storms have altered the landscape of Mars over many years, creating some of the solar system's most interesting topographical features.</p>
+            <p>A large canyon system called Valles Marineris is long enough to stretch from California to New York – more than 3,000 miles (4,800 kilometers). This Martian canyon is 200 miles (320 kilometers) at its widest and 4.3 miles (7 kilometers) at its deepest. That's about 10 times the size of Earth's Grand Canyon.</p>
+            <p>Mars is home to the largest volcano in the solar system, Olympus Mons. It's three times taller than Earth's Mt. Everest with a base the size of the state of New Mexico.</p>
+            <p>Mars appears to have had a watery past, with ancient river valley networks, deltas, and lakebeds, as well as rocks and minerals on the surface that could only have formed in liquid water. Some features suggest that Mars experienced huge floods about 3.5 billion years ago.</p>
+            <p>There is water on Mars today, but the Martian atmosphere is too thin for liquid water to exist for long on the surface. Today, water on Mars is found in the form of water-ice just under the surface in the polar regions as well as in briny (salty) water, which seasonally flows down some hillsides and crater walls.</p>
+            
+            <br><br>
+            <a name="Atmosphere"></a>
+            <h1>Atmosphere</h1>
+            <br>
+            <p>Mars has a thin atmosphere made up mostly of carbon dioxide, nitrogen, and argon gases. To our eyes, the sky would be hazy and red because of suspended dust instead of the familiar blue tint we see on Earth. Mars' sparse atmosphere doesn't offer much protection from impacts by such objects as meteorites, asteroids, and comets.</p>
+            <p>The temperature on Mars can be as high as 70 degrees Fahrenheit (20 degrees Celsius) or as low as about -225 degrees Fahrenheit (-153 degrees Celsius). And because the atmosphere is so thin, heat from the Sun easily escapes this planet. If you were to stand on the surface of Mars on the equator at noon, it would feel like spring at your feet (75 degrees Fahrenheit or 24 degrees Celsius) and winter at your head (32 degrees Fahrenheit or 0 degrees Celsius).</p>
+            <p>Occasionally, winds on Mars are strong enough to create dust storms that cover much of the planet. After such storms, it can be months before all of the dust settles.</p>
+            <br><br>
+            <a name="Magnetosphere"></a>
+            <h1>Magnetosphere</h1>
+            <br>
+            <p>Mars has no global magnetic field today, but areas of the Martian crust in the southern hemisphere are highly magnetized, indicating traces of a magnetic field from 4 billion years ago.​</p>
+            <br><br>
+
+
+
+
+
+
+            </div>
+        <div class="side">
+            
+            
+            <div style="background-color: black;">
+                <img src= "{{url_for('static', filename='GIF/Great Animated Planet Gifs.gif')}} " width="400px" height="400px">
+        
+            </div>
+            <br><br><br>
+            <div class="notes">
+                <h1 class="notes1">Quick Facts</h1>
+                <h3 class="notes1">Day</h3>
+                <p class="notes1">24.6 hours</p>
+                <h3 class="notes1">Year</h3>
+                <p class="notes1">669.6 sols | 687 Earth days</p>
+                <h3 class="notes1">Radius</h3>
+                <p class="notes1">2,106 miles | 3,390 kilometers</p>
+                <h3 class="notes1">Planet Type</h3>
+                <p class="notes1">Terrestrial</p>
+                <h3 class="notes1">Moons</h3>
+                <p class="notes1"> 2</p>
+            </div>
+            
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="foot">
+                <a href="AboutUs">About us</a>
+                <a href="Bibliography">Bibliography</a>
+                <a href="FeedBack">FeedBack</a>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+

@@ -1,0 +1,249 @@
+<!-- Editor : Michael Raouf Eldeeb -->
+<!-- Editor : Heba Elsayed -->
+<!--_____________________________________________________________________________ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+                font-family: Arial;
+                margin: 0;
+            }
+
+        /* Header/logo Title */
+        .header {
+            background-image: url("static/img/space-1690561880701-7480.jpg");
+            background-position-x: right;
+            background-repeat: no-repeat;
+            background-size: 1500px;
+            background-color: black;
+            padding: 150px;
+            text-align: center;
+            text-decoration:solid;
+            text-overflow: ellipsis;
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {  
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            background-color: white;
+            
+            
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 60%;
+            background-color: rgb(255, 255, 255)fff;
+            
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+        }
+        .footer a{
+            text-align: center  ;
+        }
+        p{
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .row, .navbar {   
+            flex-direction: column;
+        }
+        }
+        h1{
+            color: rgb(0, 0, 0);
+        }
+        .notes{
+            border: 1px gray solid;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 30px;
+        }
+        .notes1{
+            color: black;
+        }
+        
+        .footer a{
+            text-align: center;
+            color: white;
+            padding: 40px;
+            text-decoration: none;
+            
+            
+        }
+        .back{
+            flex: 10%;
+            background-color: #ffffff;
+        }
+        input[type="text"],input[type="email"],input[type="password"],select,textarea{
+                width: 100%;
+                margin: 5px;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px rgb(0, 0, 0) solid;
+                border-radius: 8px;
+                background-color: rgb(255, 255, 255);
+            }
+            
+            button{
+                background-color: rgb(0, 0, 0);
+                margin-left:5px;
+                padding: 10px 100px;
+                border-radius: 8px;
+                color: white;
+                
+            }
+            button:hover{
+                background-color: #cccccc;
+            }
+            .footer a:hover{
+            color: #cccccc;
+        }
+        </style>
+        </head>
+        <body>
+
+
+        <!-- Header -->
+        <div class="header">
+        <h1 style="font-size: 90px;color: white;">The Inner Rocky Planets</h1>
+        <p style="font-size: 20px;color: white;">Powered by: NASA's Hurghada pranch</p>
+        
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="Home">Home</a>
+            <a href="Sun">The Sun</a>
+            <a href= "Earth" >Earth</a>
+            <a href= "Moon">The Moon</a>
+            <a href="Mercury">Mercury</a>
+            <a href="venus">Venus</a>
+            <a href="Mars">Mars</a>
+            </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="back"></div>
+        
+        <div class="main">
+            <br><br>
+            <h1 style="font-size: 50px;">FeedBack</h1>
+            
+            <p>Messages of inquiry regarding NASA Solar System Exploration will be answered as time permits.</p>
+            <br><br><br>
+            <div>
+                <form action="" method="get">
+                            <label for="fristName"><b> Frist Name</b></label> 
+                            <input type="text" name="fristName" id="fristName" placeholder="Frist Name" maxlength="10">
+                            
+                            <label for="lastName"><b>Last Name</b></label>
+                            <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                            
+                            <label for="email"><b>Email</b></label>
+                            <input type="email" name="email" id="email" placeholder="Example@gmail.com">
+                            <label for="lastName"><b>URL</b></label>
+                            <input type="text" name="URL" id="URL" placeholder="URL">
+                            <br>
+                            <label for="Subject"><b>Subject</b></label>
+                            <select name="Subject" id="Subject">
+                            <option>Suggestion</option>
+                            <option>Factual Error</option>
+                            <option>Technical Problem With the Website</option>
+                            <option>Others</option>
+                            </select>
+                            
+                            
+                            
+                            
+                            
+                            
+                        <label for="Comments"><b>Comments</b></label>
+        
+                        <textarea name="Comments" id="Comments" rows="10" cols="50" maxlength="100" placeholder="Enter Your Comments"></textarea>
+                        
+        
+                        <button type="submit"><b>Submit FeedBack</b></button>
+                        
+            </form>
+        </div>
+
+
+                    </div>
+        <div class="side">
+            <br>
+            <br><br><br><br><br><br><br><br>
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="foot">
+                <a href="AboutUs">About us</a>
+                <a href="Bibliography">Bibliography</a>
+                <a href="FeedBack">FeedBack</a>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+

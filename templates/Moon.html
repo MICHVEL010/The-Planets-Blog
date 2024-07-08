@@ -1,0 +1,336 @@
+<!-- Editor : Michael Raouf Eldeeb -->
+<!-- Editor : Heba Elsayed -->
+<!--_____________________________________________________________________________ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+<title>Moon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+                background-image: url("static/img/4c252dc6874daa44427005d606b59723.jpg");
+                font-family: Arial;
+                margin: 0;
+            }
+
+        /* Header/logo Title */
+        .header {
+            background-image: url("static/img/lro_nearside.jpg");
+            background-position-x: right;
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            background-color: black;
+            padding: 150px;
+            text-align: left;
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {  
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            /* background-color: #ddd; */
+            
+            
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 50%;
+            /* background-color: #ddd; */
+            
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+        }
+        .footer a{
+            text-align: center;
+            color: white;
+            padding: 40px;
+            text-decoration: none;
+        }
+        .footer a:hover{
+            color:#cccccc;
+        }
+        p{
+            color: white;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .row, .navbar {   
+            flex-direction: column;
+        }
+        }
+        h1{
+            color: white;
+        }
+        .notes{
+            border: 1px gray solid;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 10px;
+            background-color: #ddd;
+            border-radius: 30px;
+        }
+        .notes1{
+            color: black;
+        }
+        .back{
+            flex: 10%;
+            /* background-color: #333; */
+        
+        }
+        .navegatorT a{
+            text-align: center;
+            color: rgb(0, 0, 0);
+            /* padding: 30px; */
+            text-decoration: none;
+
+        }
+        .back a:hover{
+            
+            text-decoration: underline;
+        }
+        .navegator{
+            background-color: #ddd;
+            border-radius: 10px;
+            border: 1px white solid;
+            padding: 10px;
+            margin: 10px;
+        }
+        </style>
+        </head>
+        <body>
+
+
+        <!-- Header -->
+        <div class="header">
+        <h1 style="font-size: 90px;">Earth's Moon</h1>
+        <p style="font-size: 20px;">The fifth largest moon in the solar system,</p>
+        <p style="font-size: 20px;"> Earth's moon is the only place beyond Earth </p>
+        <p style="font-size: 20px;">where humans have set foot</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="Home">Home</a>
+            <a href="Sun">The Sun</a>
+            <a href= "Earth" >Earth</a>
+            <a href= "Moon">The Moon</a>
+            <a href="Mercury">Mercury</a>
+            <a href="venus">Venus</a>
+            <a href="Mars">Mars</a>
+            </div>
+
+        <!-- The flexible grid (content) -->
+        <div class="row">
+            <div class="back">
+                <br><br><br><br>
+                <div class="navegator">
+                    <div class="navegatorT">
+                        <h3>On this Page</h3>
+                        <a href="#introduction">introduction</a>
+                        <br>
+                        <a href="#SizeandDistance">Size and Distance</a>
+                        <br>
+                        <a href="#OrbitandRotation">Orbit and Rotation</a>
+                        <br>
+                        <a href="#Structure">Structure</a>
+                        <br>
+                        <a href="#Formation">Formation</a>
+                        <br>
+                        <a href="#Surface">Surface</a>
+                        <br>
+                        <a href="#Atmosphere">Atmosphere</a>
+                        <br>
+                        <a href="#Magnetosphere">Magnetosphere</a>
+                        <br>
+                        <a href="#Rings">Rings</a>
+                        <br>
+                        <a href="#Moons">Moons</a>
+                        <br>
+                        <a href="#PotentialforLife">Potential for Life</a>
+        
+                    </div>
+            </div>
+            </div>
+        
+        <div class="main">
+            <a name="introduction"></a>
+            <p>The brightest and largest object in our night sky, the Moon makes Earth a more livable planet by moderating our home planet's wobble on its axis, leading to a relatively stable climate. It also causes tides, creating a rhythm that has guided humans for thousands of years.</p>
+            <p>The Moon was likely formed after a Mars-sized body collided with Earth several billion years ago</p>
+            <p>Earth's Moon is the only place beyond Earth where humans have set foot, so far.</p>
+            <p>Earth's only natural satellite is simply called "the Moon" because people didn't know other moons existed until Galileo Galilei discovered four moons orbiting Jupiter in 1610.</p>
+            <p>In Latin, the Moon is called Luna, which is the main adjective for all things Moon-related: lunar.</p>
+            <br><br>
+            <a name="SizeandDistance"></a>
+            <h1>Size and Distance</h1>
+            <br>
+            <p>With a radius of about 1,080 miles (1,740 kilometers), the Moon is less than a third of the width of Earth. If Earth were the size of a nickel, the Moon would be about as big as a coffee bean.</p>
+
+            <p>The Moon is an average of 238,855 miles (384,400 kilometers) away. That means 30 Earth-sized planets could fit in between Earth and the Moon.</p>
+                
+            <p>The Moon is slowly moving away from Earth, getting about an inch farther away each year.</p>
+            <br><br>
+            <a name="OrbitandRotation"></a>
+            <h1>Orbit and Rotation</h1>
+            <br>
+            <p>The Moon is rotating at the same rate that it revolves around Earth (called synchronous rotation), so the same hemisphere faces Earth all the time. Some people call the far side – the hemisphere we never see from Earth – the "dark side" but that's misleading. As the Moon orbits Earth, different parts are in sunlight or darkness at different times. The changing illumination is why, from our perspective, the Moon goes through phases. During a "full moon," the hemisphere of the Moon we can see from Earth is fully illuminated by the Sun. And a "new moon" occurs when the far side of the Moon has full sunlight, and the side facing us is having its night.</p>
+            <p>The Moon makes a complete orbit around Earth in 27 Earth days and rotates or spins at that same rate, or in that same amount of time. Because Earth is moving as well – rotating on its axis as it orbits the Sun – from our perspective, the Moon appears to orbit us every 29 days.</p>
+            <br><br>
+            <a name="Structure"></a>
+            <h1>Structure</h1>
+            <br>
+            <p>Earth's Moon has a core, mantle, and crust.</p>
+            <p>The Moon’s core is proportionally smaller than other terrestrial bodies' cores. The solid, iron-rich inner core is 149 miles (240 kilometers) in radius. It is surrounded by a liquid iron shell 56 miles (90 kilometers) thick. A partially molten layer with a thickness of 93 miles (150 kilometers) surrounds the iron core.</p>
+            <p>The mantle extends from the top of the partially molten layer to the bottom of the Moon's crust. It is most likely made of minerals like olivine and pyroxene, which are made up of magnesium, iron, silicon, and oxygen atoms.</p>
+            <p>The crust has a thickness of about 43 miles (70 kilometers) on the Moon’s near-side hemisphere and 93 miles (150 kilometers) on the far-side. It is made of oxygen, silicon, magnesium, iron, calcium, and aluminum, with small amounts of titanium, uranium, thorium, potassium, and hydrogen.</p>
+            <p>Long ago the Moon had active volcanoes, but today they are all dormant and have not erupted for millions of years.</p>
+            <br><br>
+            <a name="Formation"></a>
+            <h1>Formation</h1>
+            <br>
+            <p>The leading theory of the Moon's origin is that a Mars-sized body collided with Earth about 4.5 billion years ago. The resulting debris from both Earth and the impactor accumulated to form our natural satellite 239,000 miles (384,000 kilometers) away. The newly formed Moon was in a molten state, but within about 100 million years, most of the global "magma ocean" had crystallized, with less-dense rocks floating upward and eventually forming the lunar crust.</p>
+            <br><br>
+            <a name="Surface"></a>
+            <h1>Surface</h1>
+            <br>
+            <p>With too sparse an atmosphere to impede impacts, a steady rain of asteroids, meteoroids, and comets strikes the surface of the Moon, leaving numerous craters behind. Tycho Crater is more than 52 miles (85 kilometers) wide.</p>
+            <p>Over billions of years, these impacts have ground up the surface of the Moon into fragments ranging from huge boulders to powder. Nearly the entire Moon is covered by a rubble pile of charcoal-gray, powdery dust, and rocky debris called the lunar regolith. Beneath is a region of fractured bedrock referred to as the megaregolith.</p>
+            <p>The light areas of the Moon are known as the highlands. The dark features, called maria (Latin for seas), are impact basins that were filled with lava between 4.2 and 1.2 billion years ago. These light and dark areas represent rocks of different compositions and ages, which provide evidence for how the early crust may have crystallized from a lunar magma ocean. The craters themselves, which have been preserved for billions of years, provide an impact history for the Moon and other bodies in the inner solar system.</p>
+            <p>If you looked in the right places on the Moon, you would find pieces of equipment, American flags, and even a camera left behind by astronauts. While you were there, you'd notice that the gravity on the surface of the Moon is one-sixth of Earth's, which is why in footage of moonwalks, astronauts appear to almost bounce across the surface.</p>
+            <p>The temperature on the Moon reaches about 260 degrees Fahrenheit (127 degrees Celsius) when in full Sun, but in darkness, the temperatures plummet to about -280 degrees Fahrenheit (-173 degrees Celsius).</p>
+
+            <br><br>
+            <a name="WaterontheMoon"></a>
+            <h1>Water on the Moon</h1>
+            <br>
+            <p>During the initial exploration of the Moon, and the analysis of all the returned samples from the Apollo and the Luna missions, we thought that the surface of the Moon was dry.</p>
+            <p>The first definitive discovery of water was made in 2008 by the Indian mission Chandrayaan-1, which detected hydroxyl molecules spread across the lunar surface and concentrated at the poles. Missions such as Lunar Prospector, LCROSS, and Lunar Reconnaissance Orbiter, have not only shown that the surface of the Moon has global hydration but there are actually high concentrations of ice water in the permanently shadowed regions of the lunar poles.</p>
+            <p>Scientists also found the lunar surface releases its water when the Moon is bombarded by micrometeoroids. The surface is protected by a layer, a few centimeters of dry soil that can only be breached by large micrometeoroids. When micrometeoroids impact the surface of the Moon, most of the material in the crater is vaporized. The shock wave carries enough energy to release the water that’s coating the grains of the soil. Most of that water is released into space.</p>
+            <p>In October 2020, NASA’s Stratospheric Observatory for Infrared Astronomy (SOFIA) confirmed, for the first time, water on the sunlit surface of the Moon. This discovery indicates that water may be distributed across the lunar surface, and not limited to cold, shadowed places. SOFIA detected water molecules (H2O) in Clavius Crater, one of the largest craters visible from Earth, located in the Moon’s southern hemisphere.</p>
+            <br><br>
+            <a name="Atmosphere"></a>
+            <h1>Atmosphere</h1>
+            <p>The Moon has a very thin and weak atmosphere, called an exosphere. It does not provide any protection from the Sun's radiation or impacts from meteoroids.</p>
+            <br><br>
+            <a name="Magnetosphere"></a>
+            <h1>Magnetosphere</h1>
+            <p>The early Moon may have developed an internal dynamo, the mechanism for generating global magnetic fields for terrestrial planets, but today, the Moon has a very weak magnetic field. The magnetic field here on Earth is many thousands of times stronger than the Moon's magnetic field.</p>
+            <br><br>
+            <a name="Rings"></a>
+            <h1>Rings</h1>
+            <p>The Moon has no rings.</p>
+            <br><br>
+            <a name="Moons"></a>
+            <h1>Moons</h1>
+            <p>Earth's Moon has no moons of its own.</p>
+            <br><br>
+            <a name="PotentialforLife"></a>
+            <h1>Potential for Life</h1>
+            <p>The many missions that have explored the Moon have found no evidence to suggest it has its own living things. However, the Moon could be the site of future colonization by humans. The discovery that the Moon harbors water ice, and that the highest concentrations occur within darkened craters at the poles, makes the Moon a little more hospitable for future human colonists.</p>
+            <br><br>
+
+
+
+
+
+
+            <!-- <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <br>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p> -->
+        </div>
+        <div class="side">
+            
+            
+            <div style="background-color: black;">
+                <img src= "{{url_for('static', filename='GIF/moon.gif')}} " width="400px" height="250px">
+                
+            </div>
+            <br><br><br>
+            <div class="notes">
+                <h1 class="notes1">Quick Facts</h1>
+                <h3 class="notes1">Radius</h3>
+                <p class="notes1">1,079.6 miles | 1,737.5 kilometers</p>
+                <h3 class="notes1">Distance from Earth</h3>
+                <p class="notes1">238,855 miles | 384,400 kilometers</p>
+            </div>
+            
+        </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="foot">
+                <a href="AboutUs">About us</a>
+                <a href="Bibliography">Bibliography</a>
+                <a href="FeedBack">FeedBack</a>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
